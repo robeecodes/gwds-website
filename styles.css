@@ -47,7 +47,6 @@ body#coding {
   color: var(--coding);
 }
 
-
 /* style the mouse trailer */
 #trailer {
   position: absolute;
@@ -58,10 +57,10 @@ body#coding {
 
   pointer-events: none;
 
-  width: .5rem;
-  height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
 
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 
   background-color: var(--accent);
   color: var(--base);
@@ -71,7 +70,7 @@ body#coding {
 
   z-index: 5;
 
-  transition: all .75s, transform .15s, font-size .25s;
+  transition: all 0.75s, transform 0.15s, font-size 0.25s;
 }
 
 #trailer.expanded {
@@ -85,11 +84,11 @@ body#coding {
 
 a {
   color: var(--text);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 a:hover {
-  filter: drop-shadow(0 0 .5rem var(--accent));
+  filter: drop-shadow(0 0 0.5rem var(--accent));
 }
 
 /* pad common areas of website */
@@ -116,6 +115,7 @@ a.btn {
   cursor: pointer;
   border: 0;
 
+  background-color: var(--accent);
   color: var(--base);
   text-decoration: none;
 
@@ -231,9 +231,6 @@ header#hero .grid a.btn {
 
   font-size: 1.5rem;
   font-weight: 600;
-  
-
-  background-color: var(--accent);
 }
 
 header#hero .grid p[aria-label="graphic and web design studio"] {
@@ -278,6 +275,33 @@ header#hero picture img {
 
   object-fit: cover;
   filter: brightness(25%);
+}
+
+/* scroll down button */
+a.btn[title="scroll down"] {
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+
+  width: 7rem;
+  height: 7rem;
+
+  border: 0.1rem var(--accent) solid;
+  border-radius: 3.5rem;
+
+  background-color: transparent;
+  color: var(--accent);
+
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+a.btn[title="scroll down"]:hover {
+  background-color: var(--accent);
+  color: var(--base);
+
+  transform: scale(1.5);
 }
 
 /* projects section styling */
@@ -375,6 +399,11 @@ header#hero picture img {
   footer {
     padding-inline: calc((100vw - 90rem + 7rem) / 2);
     width: 100%;
+  }
+
+  /* scroll down button */
+  a.btn[title="scroll down"] {
+    right: calc((100vw - 90rem + 7rem) / 2);
   }
 }
 
