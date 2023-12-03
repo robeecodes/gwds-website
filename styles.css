@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body#carp {
   --accent: var(--carp);
 }
@@ -43,6 +47,52 @@ body#coding {
   color: var(--coding);
 }
 
+
+/* style the mouse trailer */
+#trailer {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+
+  width: .5rem;
+  height: .5rem;
+
+  border-radius: .25rem;
+
+  background-color: var(--accent);
+  color: var(--base);
+
+  font-size: 0;
+  line-height: 0;
+
+  z-index: 5;
+
+  transition: all .75s, transform .15s, font-size .25s;
+}
+
+#trailer.expanded {
+  width: 5rem;
+  height: 5rem;
+
+  font-size: 1.25rem;
+
+  border-radius: 2.5rem;
+}
+
+a {
+  color: var(--text);
+  transition: all .5s;
+}
+
+a:hover {
+  filter: drop-shadow(0 0 .5rem var(--accent));
+}
+
+/* pad common areas of website */
 section,
 nav,
 body > header,
@@ -55,17 +105,25 @@ section {
   padding-block: 7rem;
 }
 
-/* Basic button styling */
+/* basic button styling */
 button,
-*[role="button"] {
+*[role="button"],
+a.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   cursor: pointer;
   border: 0;
+
+  color: var(--base);
+  text-decoration: none;
 
   transition: all 0.5s;
 }
 
 button:hover,
-*[role="button"]:hover {
+a.btn:hover {
   filter: brightness(200%);
 }
 
@@ -109,17 +167,10 @@ nav li {
 
 nav li a {
   text-decoration: none;
-  color: var(--text);
-
-  transition: all .5s;
 }
 
 nav li a:visited {
   color: var(--text);
-}
-
-nav li a:hover {
-  filter: drop-shadow(0 0 1rem var(--accent));
 }
 
 nav li a[aria-current="page"] {
@@ -168,7 +219,7 @@ header#hero .grid p {
   font-weight: 300;
 }
 
-header#hero .grid button {
+header#hero .grid a.btn {
   grid-column: 6 / span 5;
   grid-row: 2;
   align-self: end;
@@ -180,11 +231,11 @@ header#hero .grid button {
 
   font-size: 1.5rem;
   font-weight: 600;
+  
 
   background-color: var(--accent);
 }
 
-/* Place the header text in the grid */
 header#hero .grid p[aria-label="graphic and web design studio"] {
   display: block;
 
@@ -257,11 +308,12 @@ header#hero picture img {
   height: 0;
 }
 
+/* style projects text */
 #projects h3 {
-  margin-top: 0;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
   font-weight: 900;
-  font-size: clamp(2rem, calc(2rem + ((1vw - 0.64rem) * 7.6923)), 4rem);
+  font-size: clamp(3rem, calc(3rem + ((1vw - 0.64rem) * 3.8462)), 4rem);
   line-height: 50%;
 }
 
@@ -291,6 +343,7 @@ header#hero picture img {
   font-weight: 300;
 }
 
+/* style projects images */
 #projects .gallery-pictures .pictures {
   aspect-ratio: 16 / 9;
   position: relative;
@@ -334,6 +387,10 @@ header#hero picture img {
     padding-inline: 3rem;
   }
 
+  #trailer {
+    display: none;
+  }
+
   /* homepage styling */
 
   /* grid is changed to flexbox */
@@ -367,7 +424,7 @@ header#hero picture img {
     display: none;
   }
 
-  header#hero .grid button {
+  header#hero .grid a.btn {
     position: absolute;
     bottom: 3rem;
 
@@ -424,10 +481,6 @@ header#hero picture img {
     justify-content: center;
     width: auto;
     height: auto;
-  }
-
-  #projects .gallery-pictures > * {
-    transform: none;
   }
 
   #projects .gallery-pictures .pictures {

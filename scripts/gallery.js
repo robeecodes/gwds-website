@@ -5,7 +5,7 @@ const photos = gsap.utils.toArray(".gallery-pictures img.scrub");
 let mm = gsap.matchMedia();
 
 mm.add("(min-width: 64em)", () => {
-    gsap.set(photos, { autoAlpha: 0, scale: 2, yPercent: 101 });
+    gsap.set(photos, { autoAlpha: 0, scale: 1.5, yPercent: 101 });
 
     const animation = gsap.to(photos, {
         autoAlpha: 1, scale: 1, yPercent: 0, duration: 1, stagger: 1
