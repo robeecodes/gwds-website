@@ -1,14 +1,14 @@
 // https://www.youtube.com/watch?v=CQHvWqYXI5s
 
+const photos = gsap.utils.toArray(".gallery-pictures img.scrub");
+
 let mm = gsap.matchMedia();
 
 mm.add("(min-width: 64em)", () => {
-    const photos = gsap.utils.toArray(".gallery-pictures img.scrub");
-
-    gsap.set(photos, { autoAlpha: 0, scale: 2 });
+    gsap.set(photos, { autoAlpha: 0, scale: 2, yPercent: 101 });
 
     const animation = gsap.to(photos, {
-        autoAlpha: 1, scale: 1, duration: 1, stagger: 1
+        autoAlpha: 1, scale: 1, yPercent: 0, duration: 1, stagger: 1
     });
 
     ScrollTrigger.create({
@@ -21,7 +21,7 @@ mm.add("(min-width: 64em)", () => {
     });
 
     return () => {
-        gsap.set(photos, { autoAlpha: 1, scale: 1 });
+        gsap.set(photos, { clearProps: true });
     }
 });
 

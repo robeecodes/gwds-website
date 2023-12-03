@@ -43,12 +43,11 @@ body#coding {
   color: var(--coding);
 }
 
-/* max size of content is 64rem with 7rem padding-inline */
 section,
 nav,
 body > header,
 footer {
-  padding-inline: calc((100vw - 64rem + 7rem) / 2);
+  padding-inline: 7rem;
   width: 100%;
 }
 
@@ -86,7 +85,7 @@ body {
 
 /* desktop navbar */
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
 
@@ -94,6 +93,8 @@ nav {
   justify-content: end;
 
   background-color: var(--base);
+
+  font-size: 1.5rem;
 }
 
 nav > ul {
@@ -106,8 +107,27 @@ nav li {
   margin-left: 3.25em;
 }
 
+nav li a {
+  text-decoration: none;
+  color: var(--text);
+
+  transition: all .5s;
+}
+
+nav li a:visited {
+  color: var(--text);
+}
+
+nav li a:hover {
+  filter: drop-shadow(0 0 1rem var(--accent));
+}
+
 nav li a[aria-current="page"] {
   color: var(--accent);
+}
+
+nav li a[aria-current="page"]:hover {
+  filter: none;
 }
 
 /* homepage styling */
@@ -149,7 +169,7 @@ header#hero .grid p {
 }
 
 header#hero .grid button {
-  grid-column: 5 / span 7;
+  grid-column: 6 / span 5;
   grid-row: 2;
   align-self: end;
 
@@ -157,8 +177,6 @@ header#hero .grid button {
 
   padding: 1rem 2rem 1.25rem 2rem;
   margin-bottom: 0.5rem;
-
-  width: 50%;
 
   font-size: 1.5rem;
   font-weight: 600;
@@ -170,7 +188,7 @@ header#hero .grid button {
 header#hero .grid p[aria-label="graphic and web design studio"] {
   display: block;
 
-  font-size: 8rem;
+  font-size: clamp(6.5rem, calc(6.5rem + ((1vw - 0.64rem) * 5.7692)), 8rem);
   font-weight: 900;
   line-height: 92.2%;
 }
@@ -186,7 +204,7 @@ header#hero .grid p[aria-label="graphic and web design studio"]:nth-of-type(2) {
 }
 
 header#hero .grid p[aria-label="graphic and web design studio"]:nth-of-type(3) {
-  grid-column: 3 / span 9;
+  grid-column: 3 / span 12;
   grid-row: 3;
 }
 
@@ -222,7 +240,7 @@ header#hero picture img {
 
 #projects .gallery-description {
   padding-left: 5rem;
-  width: 55%;
+  width: 45%;
 }
 
 #projects .gallery-data {
@@ -241,9 +259,9 @@ header#hero picture img {
 
 #projects h3 {
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   font-weight: 900;
-  font-size: 4rem;
+  font-size: clamp(2rem, calc(2rem + ((1vw - 0.64rem) * 7.6923)), 4rem);
   line-height: 50%;
 }
 
@@ -263,15 +281,11 @@ header#hero picture img {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  width: 45%;
-}
-
-#projects .gallery-pictures > * {
-  transform: translateY(-30%);
+  width: 55%;
 }
 
 #projects .gallery-heading {
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 
   font-size: 2.5rem;
   font-weight: 300;
@@ -297,6 +311,18 @@ header#hero picture img {
   height: 100%;
 
   object-fit: cover;
+}
+
+/* for larger screens */
+@media only screen and (min-width: 90em) {
+  /* max size of content is 90rem with 7rem padding-inline */
+  section,
+  nav,
+  body > header,
+  footer {
+    padding-inline: calc((100vw - 90rem + 7rem) / 2);
+    width: 100%;
+  }
 }
 
 /* For the mobile site */
