@@ -19,6 +19,14 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--base);
+
+  font-family: "Darker Grotesque", Verdana, Arial, sans-serif;
+  font-weight: 600;
+  color: var(--text);
+}
+
 body#carp {
   --accent: var(--carp);
 }
@@ -127,14 +135,6 @@ a.btn:hover {
   filter: brightness(200%);
 }
 
-body {
-  background-color: var(--base);
-
-  font-family: "Darker Grotesque", Verdana, Arial, sans-serif;
-  font-weight: 600;
-  color: var(--text);
-}
-
 /* lightbox image modal styling */
 .modal img {
   max-width: 80vw;
@@ -179,6 +179,23 @@ nav li a[aria-current="page"] {
 
 nav li a[aria-current="page"]:hover {
   filter: none;
+}
+
+/* footer styling */
+footer {
+  border-top: 1px var(--text) solid;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-block: 2rem;
+
+    height: auto;
+}
+
+footer p:last-of-type {
+  font-weight: 300;
 }
 
 /* homepage styling */
@@ -306,7 +323,7 @@ a.btn[title="scroll down"]:hover {
 
 /* projects section styling */
 #projects {
-  padding-block: 0;
+  padding-top: 0;
 }
 
 #projects .gallery {
@@ -418,6 +435,17 @@ a.btn[title="scroll down"]:hover {
 
   #trailer {
     display: none;
+  }
+
+  /* footer styling */
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer p {
+    margin: 0;
   }
 
   /* homepage styling */
