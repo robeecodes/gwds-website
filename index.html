@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic and Web Design Studio</title>
+
+    <link rel="stylesheet" href="lib/css/normalize.css">
+    <link rel="stylesheet" href="lib/css/basicLightbox.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="lib/js/basicLightbox.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script defer src="scripts/gallery.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" aria-current="page">home</a></li>
+            <li><a href="carp.html">carp</a></li>
+            <li><a href="typography.html">typography</a></li>
+            <li><a href="coding.html">coding</a></li>
+            <li><a href="reflection.html">reflection</a></li>
+        </ul>
+    </nav>
+    <header id="hero">
+        <div class="grid">
+            <h1>graphic and web design studio</h1>
+
+            <!-- These are placed in the grid on the desktop site -->
+            <!-- aria-label allows screen reader to read whole text if user interacts -->
+            <p aria-label="graphic and web design studio">graphic and</p>
+            <p aria-label="graphic and web design studio">web</p>
+            <p aria-label="graphic and web design studio">design studio</p>
+
+
+            <p>robin king</p>
+            <button type="button">view my projects</button>
+        </div>
+        <picture>
+            <source srcset="https://placekitten.com/900/900">
+            <img src="https://placekitten.com/600/600" alt="Graphic and Web Design Studio Showreel">
+        </picture>
+    </header>
+    <main>
+        <section id="projects">
+            <div class="gallery">
+                <div class="gallery-pictures">
+                    <h2 class="gallery-heading">projects</h2>
+                    <div class="pictures">
+                        <h3 class="mobile carp">carp</h3>
+                        <picture>
+                            <source srcset="https://placekitten.com/900/900">
+                            <img role="button" tabindex="0" src="https://placekitten.com/600/600" alt="carp preview">
+                        </picture>
+                        <div class="gallery-data mobile">
+                            <p>A poster for a Girls’ Skate clinic designed using four design principles: Contrast,
+                                Alignment, Repetition and Proximity.</p>
+                            <p><a href="carp.html" class="carp">Find out more -></a></p>
+                        </div>
+                        <h3 class="mobile typography">typography</h3>
+                        <picture>
+                            <source srcset="https://placedog.net//900/900">
+                            <img class="scrub" role="button" tabindex="0" src="https://placedog.net//600/600"
+                                alt="typography preview">
+                        </picture>
+                        <div class="gallery-data mobile">
+                            <p>Eight pieces advertising the THREADS event at Arnolfini, utilising different typographic
+                                systems: Axial, Radial, Dilatational, Random, Grid, Modular, Transitional, & Bilateral.
+                            </p>
+                            <p><a href="typography.html" class="typography">Find out more -></a></p>
+                        </div>
+                        <h3 class="mobile coding">coding</h3>
+                        <picture>
+                            <source srcset="https://loremflickr.com/900/900">
+                            <img class="scrub" role="button" tabindex="0" src="https://loremflickr.com/600/600"
+                                alt="coding preview">
+                        </picture>
+                        <div class="gallery-data mobile">
+                            <p>Six worksheets showing principles of HTML and CSS.</p>
+                            <p><a href="coding.html" class="coding">Find out more -></a></p>
+                        </div>
+                        <h3 class="mobile accent">reflection</h3>
+                        <picture>
+                            <source srcset="https://placebear.com/900/900">
+                            <img class="scrub" role="button" tabindex="0" src="https://placebear.com/600/600"
+                                alt="reflection preview">
+                        </picture>
+                        <div class="gallery-data mobile">
+                            <p>Overall thoughts and evaluation of my projects</p>
+                            <p><a href="reflection.html" class="accent">Find out more -></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-description">
+                    <div class="gallery-data">
+                        <h3 class="carp">carp</h3>
+                        <p>A poster for a Girls’ Skate clinic designed using four design principles: Contrast,
+                            Alignment, Repetition and Proximity.</p>
+                        <p><a href="carp.html" class="carp">Find out more -></a></p>
+                    </div>
+                    <div class="gallery-data">
+                        <h3 class="typography">typography</h3>
+                        <p>Eight pieces advertising the THREADS event at Arnolfini, utilising different typographic
+                            systems: Axial, Radial, Dilatational, Random, Grid, Modular, Transitional, & Bilateral.</p>
+                        <p><a href="typography.html" class="typography">Find out more -></a></p>
+                    </div>
+                    <div class="gallery-data">
+                        <h3 class="coding">coding</h3>
+                        <p>Six worksheets showing principles of HTML and CSS.</p>
+                        <p><a href="coding.html" class="coding">Find out more -></a></p>
+                    </div>
+                    <div class="gallery-data">
+                        <h3 class="accent">reflection</h3>
+                        <p>Overall thoughts and evaluation of my projects</p>
+                        <p><a href="reflection.html" class="accent">Find out more -></a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
