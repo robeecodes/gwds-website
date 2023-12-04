@@ -58,6 +58,32 @@ body#coding {
   color: var(--coding);
 }
 
+h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+
+  color: var(--accent);
+  font-size: clamp(4rem, calc(4rem + ((1vw - 0.32rem) * 6.8966)), 8rem);
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 0;
+
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+img {
+  border-radius: 2rem;
+
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
 /* style the mouse trailer */
 #trailer {
   position: absolute;
@@ -111,8 +137,12 @@ footer {
   width: 100%;
 }
 
+header {
+  padding-top: 7rem;
+}
+
 section {
-  padding-block: 7rem;
+  padding-top: 1rem;
 }
 
 /* basic button styling */
@@ -141,6 +171,8 @@ a.btn:hover {
 /* lightbox image modal styling */
 .modal {
   position: fixed;
+
+  top: 0;
 
   width: 100vw;
   height: 100vh;
@@ -215,9 +247,10 @@ footer {
   justify-content: space-between;
   align-items: center;
 
+  margin-top: 7rem;
   padding-block: 2rem;
 
-    height: auto;
+  height: auto;
 }
 
 footer p:last-of-type {
@@ -230,13 +263,15 @@ footer p:last-of-type {
 header#hero {
   position: relative;
 
+  padding-top: 0;
+
   display: flex;
   flex-direction: column;
 
   justify-content: center;
   align-items: center;
 
-  height: 100dvh;
+  height: 100svh;
   height: 100vh;
 }
 
@@ -369,6 +404,10 @@ a.btn[title="scroll down"]:hover {
   height: 100vh;
 }
 
+#projects .gallery-heading {
+  margin-bottom: 2.5rem;
+}
+
 /* hide the mobile descriptions */
 #projects .mobile {
   display: none;
@@ -403,13 +442,6 @@ a.btn[title="scroll down"]:hover {
   width: 55%;
 }
 
-#projects .gallery-heading {
-  margin-bottom: 2.5rem;
-
-  font-size: 2.5rem;
-  font-weight: 300;
-}
-
 /* style projects images */
 #projects .gallery-pictures .pictures {
   aspect-ratio: 16 / 9;
@@ -432,6 +464,33 @@ a.btn[title="scroll down"]:hover {
 
   object-fit: cover;
 }
+
+/* carp page styling */
+.artwork .images {
+  display: flex;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-block: 1rem;
+  padding-inline: 2rem;
+
+  overflow-y: scroll;
+}
+
+.artwork .images img {
+  height: 50vh;
+  margin-right: 2rem;
+}
+
+.highlight img {
+  margin-top: 1rem;
+  margin-inline: auto;
+
+  height: 60vh;
+}
+
 
 /* for larger screens */
 @media only screen and (min-width: 90em) {
@@ -463,7 +522,7 @@ a.btn[title="scroll down"]:hover {
     display: none;
   }
 
-  /* navbar styling */
+  /* mobile navbar */
   .burger {
     position: fixed;
     top: 1rem;
@@ -503,10 +562,10 @@ a.btn[title="scroll down"]:hover {
     position: fixed;
     left: 101%;
 
-    display: none;
-
     width: 100vw;
     height: 100vh;
+
+    visibility: hidden;
 
     flex-direction: column;
     justify-content: center;
@@ -516,11 +575,12 @@ a.btn[title="scroll down"]:hover {
   
     padding: 0;
 
-    transition: left .5s;
+    transition: all .5s;
   }
 
   nav.open {
-    display: flex;
+    visibility: initial;
+
     left: 0;
   }
   
@@ -592,6 +652,9 @@ a.btn[title="scroll down"]:hover {
   header#hero h1 {
     margin: 0;
 
+    color: var(--text);
+    line-height: 1;
+
     font-size: clamp(2rem, calc(2rem + ((1vw - 0.32rem) * 15.625)), 7rem);
     font-weight: 900;
   }
@@ -607,9 +670,11 @@ a.btn[title="scroll down"]:hover {
 
   header#hero .grid a.btn {
     position: absolute;
-    bottom: 3rem;
+    bottom: 2rem;
 
     align-self: center;
+
+    padding-block: .25rem .5rem;
 
     height: auto;
     width: auto;
@@ -625,7 +690,6 @@ a.btn[title="scroll down"]:hover {
   }
 
   header#hero picture img {
-    border-radius: 10%;
     height: 100%;
   }
 
@@ -673,15 +737,11 @@ a.btn[title="scroll down"]:hover {
   #projects .gallery .pictures img {
     position: static;
 
-    border-radius: 2rem;
-
     margin-top: 2rem;
 
     aspect-ratio: 16 / 9;
 
     width: 100%;
     height: auto;
-
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
   }
 }

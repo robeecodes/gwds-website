@@ -1,21 +1,21 @@
 const burger = document.querySelector(".burger");
 const nav = document.querySelector("nav");
 
+window.addEventListener("resize", () => {
+    burger.setAttribute("aria-expanded", "false");
+    burger.classList.remove("open");
+    nav.classList.remove("open");
+    document.body.removeAttribute("style");
+});
+
 burger.addEventListener("click", () => {
-    if (nav.classList.contains("open")) {
-        nav.style.left = "101%";
-
-        setTimeout(() => {
-            nav.style.display = "none";
-        }, 500);
-
-    } else {
-        nav.style.display = "flex";
-
-        setTimeout(() => {
-            nav.style.left = "0";
-        }, 5);
-    };
-
     nav.classList.toggle("open");
+
+    if (nav.classList.contains("open")) {
+        document.body.style.overflow = "hidden";
+        burger.setAttribute("aria-expanded", false);
+    } else {
+        burger.setAttribute("aria-expanded", true);
+        document.body.style.overflow = "initial";
+    };
 });

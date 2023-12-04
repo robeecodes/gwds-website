@@ -24,21 +24,3 @@ mm.add("(min-width: 64em)", () => {
         gsap.set(photos, { clearProps: true });
     }
 });
-
-document.querySelectorAll(".gallery-pictures img").forEach(pic => {
-    console.log(pic);
-    let lightbox = document.querySelector("dialog.modal");
-
-    pic.addEventListener("click", () => {
-        lightbox.setAttribute("open", "true");
-        lightbox.innerHTML = `<img src="${pic.src}">`;
-        document.body.style.overflow = "hidden";
-        document.body.style.height = "100vh";
-    });
-
-    lightbox.addEventListener("click", () => {
-        lightbox.setAttribute("open", "false");
-        document.body.style.overflow = "initial";
-        document.body.style.height = "initial";
-    });
-});
