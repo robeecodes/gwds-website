@@ -26,17 +26,15 @@ mm.add("(min-width: 64em)", () => {
 });
 
 document.querySelectorAll(".gallery-pictures img").forEach(pic => {
-    const src = pic.src;
-
-    const instance = basicLightbox.create(
-        `
-            <div class="modal">
-                <img src="${src}">
-            </div>
-        `
-    );
+    console.log(pic);
+    let lightbox = document.querySelector("dialog.modal");
 
     pic.addEventListener("click", () => {
-        instance.show();
+        lightbox.setAttribute("open", "true");
+        lightbox.innerHTML = `<img src="${pic.src}">`;
+    });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.setAttribute("open", "false");
     });
 });
