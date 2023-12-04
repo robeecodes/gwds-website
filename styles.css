@@ -25,6 +25,9 @@ body {
   font-family: "Darker Grotesque", Verdana, Arial, sans-serif;
   font-weight: 600;
   color: var(--text);
+
+  /* prevent overflow from the mouse trailer */
+  overflow-x: hidden;
 }
 
 body#carp {
@@ -161,6 +164,10 @@ a.btn:hover {
 }
 
 /* desktop navbar */
+.burger {
+  display: none;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -454,6 +461,104 @@ a.btn[title="scroll down"]:hover {
 
   #trailer {
     display: none;
+  }
+
+  /* navbar styling */
+  .burger {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 1.5rem;
+  }
+
+  .burger .burger-line {
+    display: block;
+
+    height: .25rem;
+    width: 75%;
+
+    border-radius: .125rem;
+
+    margin-top: .25rem;
+
+    background-color: var(--base);
+  }
+
+  .burger .burger-line:first-of-type {
+    margin-top: 0;
+  }
+
+  nav {
+    position: fixed;
+    left: 101%;
+
+    display: none;
+
+    width: 100vw;
+    height: 100vh;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  
+    background-color: var(--accent);
+  
+    padding: 0;
+
+    transition: left .5s;
+  }
+
+  nav.open {
+    display: flex;
+    left: 0;
+  }
+  
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+  
+    list-style-type: none;
+  }
+  
+  nav li {
+    margin-left: 0;
+  }
+  
+  nav li a {
+    color: var(--base);
+    font-weight: 900;
+    font-size: 6rem;
+
+    line-height: 80%;
+
+    text-transform: uppercase;
+    word-wrap: break-word;
+  }
+  
+  nav li a:visited {
+    color: var(--base);
+  }
+
+  nav li a:hover {
+    color: var(--text);
+  }
+  
+  nav li a[aria-current="page"] {
+    color: var(--text);
   }
 
   /* footer styling */

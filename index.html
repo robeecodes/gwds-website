@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="styles.css">
 
+    <script defer src="scripts/nav.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
     <script defer src="scripts/gallery.js"></script>
@@ -17,13 +18,18 @@
 <body>
     <dialog class="modal" open="false"></dialog>
     <div id="trailer">view</div>
+    <button class="burger" aria-label="open main menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
     <nav>
         <ul>
             <li><a href="#" aria-current="page">home</a></li>
             <li><a href="carp.html">carp</a></li>
-            <li><a href="typography.html">typography</a></li>
+            <li><a href="typography.html">typo&shy;graphy</a></li>
             <li><a href="coding.html">coding</a></li>
-            <li><a href="reflection.html">reflection</a></li>
+            <li><a href="reflection.html">reflec&shy;tion</a></li>
         </ul>
     </nav>
     <header id="hero">
@@ -74,7 +80,7 @@
                         </picture>
                         <div class="gallery-data mobile">
                             <p>Eight pieces advertising the THREADS event at Arnolfini, utilising different typographic
-                                systems: Axial, Radial, Dilatational, Random, Grid, Modular, Transitional, & Bilateral.
+                                systems: <span class="typography">Axial</span>, <span class="typography">Radial</span>, <span class="typography">Dilatational</span>, <span class="typography">Random</span>, <span class="typography">Grid</span>, <span class="typography">Modular</span>, <span class="typography">Transitional</span>, & <span class="typography">Bilateral</span>.
                             </p>
                             <p><a href="typography.html" class="typography">Find out more -></a></p>
                         </div>
@@ -85,7 +91,7 @@
                                 src="https://picsum.photos/600/600" alt="coding preview">
                         </picture>
                         <div class="gallery-data mobile">
-                            <p>Six worksheets showing principles of HTML and CSS.</p>
+                            <p>Six worksheets showing principles of <span class="coding">HTML</span> and <span class="coding">CSS</span>.</p>
                             <p><a href="coding.html" class="coding">Find out more -></a></p>
                         </div>
                         <h3 class="mobile accent">reflection</h3>
@@ -113,12 +119,12 @@
                     <div class="gallery-data">
                         <h3 class="typography">typography</h3>
                         <p>Eight pieces advertising the THREADS event at Arnolfini, utilising different typographic
-                            systems: Axial, Radial, Dilatational, Random, Grid, Modular, Transitional, & Bilateral.</p>
+                            systems: <span class="typography">Axial</span>, <span class="typography">Radial</span>, <span class="typography">Dilatational</span>, <span class="typography">Random</span>, <span class="typography">Grid</span>, <span class="typography">Modular</span>, <span class="typography">Transitional</span>, & <span class="typography">Bilateral</span>.</p>
                         <p><a href="typography.html" class="typography">Find out more -></a></p>
                     </div>
                     <div class="gallery-data">
                         <h3 class="coding">coding</h3>
-                        <p>Six worksheets showing principles of HTML and CSS.</p>
+                        <p>Six worksheets showing principles of <span class="coding">HTML</span> and <span class="coding">CSS</span>.</p>
                         <p><a href="coding.html" class="coding">Find out more -></a></p>
                     </div>
                     <div class="gallery-data">
