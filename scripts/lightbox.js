@@ -3,7 +3,7 @@ document.querySelectorAll("img[role='button']").forEach(pic => {
 
     pic.addEventListener("click", () => {
         lightbox.setAttribute("open", "true");
-        lightbox.innerHTML = `<img src="${pic.src}">`;
+        lightbox.innerHTML = `<img src="${pic.src}" /><p>Click anywhere to close</p>`;
         document.body.style.overflow = "hidden";
         document.body.style.height = "100vh";
     });

@@ -20,6 +20,9 @@ html {
 }
 
 body {
+  padding: 0;
+  margin: 0;
+
   background-color: var(--base);
 
   font-family: "Darker Grotesque", Verdana, Arial, sans-serif;
@@ -27,18 +30,18 @@ body {
   color: var(--text);
 
   /* prevent overflow from the mouse trailer */
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
-body#carp {
+body#carp, .carp {
   --accent: var(--carp);
 }
 
-body#typography {
+body#typography, .typography {
   --accent: var(--typography);
 }
 
-body#coding {
+body#coding, .coding {
   --accent: var(--coding);
 }
 
@@ -46,24 +49,11 @@ body#coding {
   color: var(--accent);
 }
 
-.carp {
-  color: var(--carp);
-}
-
-.typography {
-  color: var(--typography);
-}
-
-.coding {
-  color: var(--coding);
-}
-
 h1 {
-  margin-top: 0;
-  margin-bottom: 2rem;
+  margin-block: 0;
 
   color: var(--accent);
-  font-size: clamp(4rem, calc(4rem + ((1vw - 0.32rem) * 6.8966)), 8rem);
+  font-size: clamp(6rem, calc(6rem + ((1vw - 0.32rem) * 3.4483)), 8rem); 
   line-height: 1;
 }
 
@@ -82,6 +72,8 @@ img {
   border-radius: 2rem;
 
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+
+  width: 100%;
 }
 
 /* style the mouse trailer */
@@ -105,7 +97,7 @@ img {
   font-size: 0;
   line-height: 0;
 
-  z-index: 5;
+  z-index: 101;
 
   transition: all 0.75s, transform 0.15s, font-size 0.25s;
 }
@@ -183,16 +175,27 @@ a.btn:hover {
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
+
+  backdrop-filter: blur(.5rem);
+  -webkit-backdrop-filter: blur(.5rem);
 }
 
-.modal[open = "true"] {
+.modal[open="true"] {
   display: flex;
+  flex-direction: column;
 }
 
 .modal img {
-  max-width: 80vw;
-  height: auto;
+  width: auto;
+
+  max-width: 50vw;
+}
+
+.modal p {
+  margin-block: .5rem;
+
+  color: var(--accent);
 }
 
 /* desktop navbar */
@@ -349,8 +352,6 @@ header#hero picture {
 header#hero picture img {
   border-radius: 2rem;
 
-  width: 100%;
-
   object-fit: cover;
   filter: brightness(25%);
 }
@@ -459,38 +460,46 @@ a.btn[title="scroll down"]:hover {
 #projects .gallery .pictures img {
   position: absolute;
 
-  width: 100%;
   height: 100%;
 
   object-fit: cover;
 }
 
 /* carp page styling */
-.artwork .images {
+.showcase {
   display: flex;
 
+  margin-top: 1rem;
+}
+
+.showcase p {
+  margin-left: 2rem;
+}
+
+.artwork .images {
+  display: flex;
   justify-content: space-between;
 
-  width: 100%;
+  width: 50%;
 
-  margin-block: 1rem;
-  padding-inline: 2rem;
-
-  overflow-y: scroll;
+  overflow-x: auto;
 }
 
-.artwork .images img {
-  height: 50vh;
-  margin-right: 2rem;
+.artwork .images picture {
+  min-width: 10rem;
 }
 
-.highlight img {
-  margin-top: 1rem;
-  margin-inline: auto;
-
-  height: 60vh;
+.artwork .images picture:not(:last-of-type) {
+  margin-right: 1rem;
 }
 
+.highlight picture {
+  width: 40%;
+}
+
+.highlight p {
+  width: 60%;
+}
 
 /* for larger screens */
 @media only screen and (min-width: 90em) {
@@ -544,12 +553,12 @@ a.btn[title="scroll down"]:hover {
   .burger .burger-line {
     display: block;
 
-    height: .25rem;
+    height: 0.25rem;
     width: 75%;
 
-    border-radius: .125rem;
+    border-radius: 0.125rem;
 
-    margin-top: .25rem;
+    margin-top: 0.25rem;
 
     background-color: var(--base);
   }
@@ -570,12 +579,12 @@ a.btn[title="scroll down"]:hover {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-  
+
     background-color: var(--accent);
-  
+
     padding: 0;
 
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   nav.open {
@@ -583,21 +592,21 @@ a.btn[title="scroll down"]:hover {
 
     left: 0;
   }
-  
+
   nav > ul {
     display: flex;
     flex-direction: column;
 
     margin: 0;
     padding: 0;
-  
+
     list-style-type: none;
   }
-  
+
   nav li {
     margin-left: 0;
   }
-  
+
   nav li a {
     color: var(--base);
     font-weight: 900;
@@ -608,7 +617,7 @@ a.btn[title="scroll down"]:hover {
     text-transform: uppercase;
     word-wrap: break-word;
   }
-  
+
   nav li a:visited {
     color: var(--base);
   }
@@ -616,7 +625,7 @@ a.btn[title="scroll down"]:hover {
   nav li a:hover {
     color: var(--text);
   }
-  
+
   nav li a[aria-current="page"] {
     color: var(--text);
   }
@@ -674,7 +683,7 @@ a.btn[title="scroll down"]:hover {
 
     align-self: center;
 
-    padding-block: .25rem .5rem;
+    padding-block: 0.25rem 0.5rem;
 
     height: auto;
     width: auto;
@@ -741,7 +750,29 @@ a.btn[title="scroll down"]:hover {
 
     aspect-ratio: 16 / 9;
 
-    width: 100%;
     height: auto;
+  }
+
+  /* carp page styling */
+  .showcase {
+    flex-direction: column;
+  }
+
+  .showcase p {
+    margin-left: 0;
+  }
+
+  .artwork .images {
+    width: 100%;
+  }
+
+  .highlight picture {
+    margin-inline: auto;
+
+    width: 100%;
+  }
+
+  .highlight p {
+    width: 100%;
   }
 }
