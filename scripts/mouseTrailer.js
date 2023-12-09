@@ -1,5 +1,5 @@
 const trail = document.querySelector("#trailer");
-const pics = document.querySelectorAll(`img[role="button"]`);
+const pics = document.querySelectorAll(`picture[role="button"]`);
 
 document.addEventListener("mousemove", (e) => {
     let x = e.pageX - trail.offsetWidth / 2;
