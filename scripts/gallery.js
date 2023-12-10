@@ -4,7 +4,7 @@ const photos = gsap.utils.toArray(".gallery-pictures img.scrub");
 
 let mm = gsap.matchMedia();
 
-// min-width is slightly above 64em to prevent overlap when changin screen size
+// min-width is slightly above 64em to prevent overlap when changing screen size
 mm.add("(min-width: calc(64em + .1px))", () => {
     gsap.set(photos, { autoAlpha: 0, scale: 1.5, yPercent: 150 });
 
