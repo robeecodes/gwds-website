@@ -2,7 +2,8 @@ const timelinePics = Array.from(document.querySelectorAll(".timeline > div > pic
 
 let mm = gsap.matchMedia();
 
-mm.add("(min-width: 64em)", () => {
+// min-width is slightly above 64em to prevent overlap when changin screen size
+mm.add("(min-width: calc(64em + .1px))", () => {
 
     ScrollTrigger.refresh();
 

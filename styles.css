@@ -93,12 +93,16 @@ img {
 
 /* style the mouse trailer */
 #trailer {
-  position: absolute;
+  position: fixed;
+
+  top: 0;
+  left: 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  /* this makes it so you can click content underneath the trailer */
   pointer-events: none;
 
   width: 0.5rem;
@@ -114,7 +118,13 @@ img {
 
   z-index: 101;
 
+  opacity: 0;
+
   transition: all 0.75s, transform 0.15s, font-size 0.25s;
+}
+
+body:hover #trailer {
+  opacity: 1;
 }
 
 #trailer.expanded {
@@ -206,8 +216,10 @@ a.btn:hover {
 }
 
 .modal img {
-  height: 80vh;
+  height: auto;
+  max-height: 80vh;
   width: auto;
+  max-width: 80vw;
 }
 
 .modal p {
@@ -340,17 +352,23 @@ header#hero .text-grid p[aria-label="graphic and web design studio"] {
   line-height: 92.2%;
 }
 
-header#hero .text-grid p[aria-label="graphic and web design studio"]:nth-of-type(1) {
+header#hero
+  .text-grid
+  p[aria-label="graphic and web design studio"]:nth-of-type(1) {
   grid-column: 1 / span 12;
   grid-row: 1;
 }
 
-header#hero .text-grid p[aria-label="graphic and web design studio"]:nth-of-type(2) {
+header#hero
+  .text-grid
+  p[aria-label="graphic and web design studio"]:nth-of-type(2) {
   grid-column: 2 / span 3;
   grid-row: 2;
 }
 
-header#hero .text-grid p[aria-label="graphic and web design studio"]:nth-of-type(3) {
+header#hero
+  .text-grid
+  p[aria-label="graphic and web design studio"]:nth-of-type(3) {
   grid-column: 3 / span 12;
   grid-row: 3;
 }
@@ -534,7 +552,6 @@ a.btn[title="scroll down"]:hover {
 .grid div picture img {
   height: 100%;
 }
-
 
 /* for larger screens */
 @media only screen and (min-width: 90em) {
@@ -798,7 +815,9 @@ a.btn[title="scroll down"]:hover {
   }
 
   .timeline picture {
-    width: 100%;
+    margin-inline: auto;
+
+    width: 90%;
   }
 
   .timeline div .data {

@@ -17,13 +17,19 @@
 </head>
 
 <body>
+    <!-- this is the lightbox which appears when an image is clicked -->
     <dialog class="modal" open="false"></dialog>
+
+    <!-- this is the trailer which follows the mouse -->
     <div id="trailer">view</div>
+
+    <!-- this draws the hamburger menu on mobile -->
     <button class="burger" aria-label="open main menu" aria-expanded="false">
         <span class="burger-line"></span>
         <span class="burger-line"></span>
         <span class="burger-line"></span>
     </button>
+
     <nav>
         <ul>
             <li><a href="#" aria-current="page">home</a></li>
@@ -35,6 +41,7 @@
     </nav>
     <header id="hero">
         <div class="text-grid">
+            <!-- h1 is hidden on the desktop site, however, can still be targeted by screen readers -->
             <h1>graphic and web design studio</h1>
 
             <!-- These are placed in the grid on the desktop site -->
@@ -56,11 +63,16 @@
     <main>
         <section id="projects">
             <div class="gallery">
+                <!-- gallery pictures -->
                 <div class="gallery-pictures">
                     <h2 class="gallery-heading">projects</h2>
                     <div class="pictures">
+                        <!-- elements with the "mobile" class are hidden on the desktop -->
                         <h3 class="mobile carp accent">carp</h3>
+
+                        <!-- pictures which open the lightbox have the button role, so screen reader users know they can interact with them -->
                         <picture role="button" tabindex="0" aria-label="carp preview">
+                            <!-- the browser will serve the smaller webp files if they are compatible -->
                             <source srcset="assets/img/carp/final.webp">
                             <img src="assets/img/carp/final.png" alt="carp preview">
                         </picture>
@@ -113,8 +125,9 @@
                             <p><a href="reflection.html" class="accent">Find out more -></a></p>
                         </div>
                     </div>
-                    <p><em>Press the images to get a closer look!</em></p>
                 </div>
+
+                <!-- descriptions for each gallery picture, hidden on mobile -->
                 <div class="gallery-description">
                     <div class="gallery-data">
                         <h3 class="carp accent">carp</h3>

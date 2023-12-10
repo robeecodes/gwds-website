@@ -4,7 +4,8 @@ const photos = gsap.utils.toArray(".gallery-pictures img.scrub");
 
 let mm = gsap.matchMedia();
 
-mm.add("(min-width: 64em)", () => {
+// min-width is slightly above 64em to prevent overlap when changin screen size
+mm.add("(min-width: calc(64em + .1px))", () => {
     gsap.set(photos, { autoAlpha: 0, scale: 1.5, yPercent: 150 });
 
     const animation = gsap.to(photos, {
