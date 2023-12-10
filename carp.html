@@ -11,6 +11,7 @@
     <script defer src="scripts/nav.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script defer src="scripts/timeline.js"></script>
     <script defer src="scripts/lightbox.js"></script>
     <script defer src="scripts/mouseTrailer.js"></script>
 </head>
@@ -38,12 +39,21 @@
         <p><em>Press the images to get a full view!</em></p>
     </header>
     <main>
-        <section class="showcase">
+        <section class="timeline">
             <div>
-                <picture role="button" tabindex="0">
+                <picture role="button" tabindex="0" aria-label="carp moodboard">
+                    <source srcset="assets/img/carp/moodboard.webp">
+                    <img src="assets/img/carp/moodboard.png" alt="carp moodboard">
+                </picture>
+                <div class="data">
+                    <h2 class="accent">research</h2>
+                    <p>Placeholder text lol</p>
+                </div>
+            </div>
+            <div>
+                <picture role="button" tabindex="0" aria-label="carp idea 1">
                     <source srcset="assets/img/carp/idea-1.webp">
-                    <img aria-label="carp idea 1"
-                        src="assets/img/carp/idea-1.png" alt="carp idea 1">
+                    <img src="assets/img/carp/idea-1.png" alt="carp idea 1">
                 </picture>
                 <div class="data">
                     <h2 class="accent">my first idea</h2>
@@ -51,10 +61,9 @@
                 </div>
             </div>
             <div>
-                <picture role="button" tabindex="0">
+                <picture role="button" tabindex="0" aria-label="carp idea 2">
                     <source srcset="assets/img/carp/idea-2.webp">
-                    <img aria-label="carp idea 2"
-                        src="assets/img/carp/idea-2.png" alt="carp idea 2">
+                    <img src="assets/img/carp/idea-2.png" alt="carp idea 2">
                 </picture>
                 <div class="data">
                     <h2 class="accent">my second idea</h2>
@@ -62,10 +71,9 @@
                 </div>
             </div>
             <div>
-                <picture role="button" tabindex="0">
+                <picture role="button" tabindex="0" aria-label="carp idea 3">
                     <source srcset="assets/img/carp/idea-3.webp">
-                    <img aria-label="carp idea 3"
-                        src="assets/img/carp/idea-3.png" alt="carp idea 3">
+                    <img src="assets/img/carp/idea-3.png" alt="carp idea 3">
                 </picture>
                 <div class="data">
                     <h2 class="accent">my third idea</h2>
@@ -73,10 +81,9 @@
                 </div>
             </div>
             <div>
-                <picture role="button" tabindex="0">
+                <picture role="button" tabindex="0" aria-label="carp refinement process">
                     <source srcset="assets/img/carp/refine-1.webp">
-                    <img aria-label="carp refinement process"
-                        src="assets/img/carp/refine-1.png" alt="carp refinement process">
+                    <img src="assets/img/carp/refine-1.png" alt="carp refinement process">
                 </picture>
                 <div class="data">
                     <h2 class="accent">refining my piece</h2>
@@ -84,10 +91,9 @@
                 </div>
             </div>
             <div>
-                <picture role="button" tabindex="0">
+                <picture role="button" tabindex="0" aria-label="carp final image">
                     <source srcset="assets/img/carp/final.webp">
-                    <img aria-label="carp final image"
-                        src="assets/img/carp/final.png" alt="carp final image">
+                    <img src="assets/img/carp/final.png" alt="carp final image">
                 </picture>
                 <div class="data">
                     <h2 class="accent">my final piece</h2>

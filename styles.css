@@ -302,14 +302,14 @@ header#hero h1 {
 }
 
 /* header text is placed in a grid */
-header#hero .grid {
+header#hero .text-grid {
   display: grid;
 
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, auto);
 }
 
-header#hero .grid p {
+header#hero .text-grid p {
   margin: 0;
   grid-column: 1 / span 12;
   grid-row: 4;
@@ -318,7 +318,7 @@ header#hero .grid p {
   font-weight: 300;
 }
 
-header#hero .grid a.btn {
+header#hero .text-grid a.btn {
   grid-column: 6 / span 5;
   grid-row: 2;
   align-self: end;
@@ -332,7 +332,7 @@ header#hero .grid a.btn {
   font-weight: 600;
 }
 
-header#hero .grid p[aria-label="graphic and web design studio"] {
+header#hero .text-grid p[aria-label="graphic and web design studio"] {
   display: block;
 
   font-size: clamp(6.5rem, calc(6.5rem + ((1vw - 0.64rem) * 5.7692)), 8rem);
@@ -340,17 +340,17 @@ header#hero .grid p[aria-label="graphic and web design studio"] {
   line-height: 92.2%;
 }
 
-header#hero .grid p[aria-label="graphic and web design studio"]:nth-of-type(1) {
+header#hero .text-grid p[aria-label="graphic and web design studio"]:nth-of-type(1) {
   grid-column: 1 / span 12;
   grid-row: 1;
 }
 
-header#hero .grid p[aria-label="graphic and web design studio"]:nth-of-type(2) {
+header#hero .text-grid p[aria-label="graphic and web design studio"]:nth-of-type(2) {
   grid-column: 2 / span 3;
   grid-row: 2;
 }
 
-header#hero .grid p[aria-label="graphic and web design studio"]:nth-of-type(3) {
+header#hero .text-grid p[aria-label="graphic and web design studio"]:nth-of-type(3) {
   grid-column: 3 / span 12;
   grid-row: 3;
 }
@@ -481,21 +481,21 @@ a.btn[title="scroll down"]:hover {
 }
 
 /* carp page styling */
-.showcase > div {
+.timeline > div {
   display: flex;
 
   margin-bottom: 3rem;
 }
 
-.showcase div:nth-child(even) picture {
+.timeline div:nth-child(even) picture {
   order: 2;
 }
 
-.showcase picture {
+.timeline picture {
   width: 55%;
 }
 
-.showcase div .data {
+.timeline div .data {
   flex-direction: column;
 
   padding-left: 3rem;
@@ -503,10 +503,38 @@ a.btn[title="scroll down"]:hover {
   width: 45%;
 }
 
-.showcase div .data:nth-child(odd) {
+.timeline div .data:nth-child(odd) {
   padding-left: 0;
   padding-right: 3rem;
 }
+
+/* typography page styling */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+
+  margin-bottom: 2rem;
+
+  width: 100%;
+}
+
+.grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid div picture {
+  aspect-ratio: 1 / 1;
+
+  margin-top: 1rem;
+}
+
+.grid div picture img {
+  height: 100%;
+}
+
 
 /* for larger screens */
 @media only screen and (min-width: 90em) {
@@ -651,7 +679,7 @@ a.btn[title="scroll down"]:hover {
   /* homepage styling */
 
   /* grid is changed to flexbox */
-  header#hero .grid {
+  header#hero .text-grid {
     position: relative;
 
     display: flex;
@@ -675,16 +703,16 @@ a.btn[title="scroll down"]:hover {
     font-weight: 900;
   }
 
-  header#hero .grid p {
+  header#hero .text-grid p {
     font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.32rem) * 7.8125)), 4rem);
   }
 
   /* grid text is hidden */
-  header#hero .grid p[aria-label="graphic and web design studio"] {
+  header#hero .text-grid p[aria-label="graphic and web design studio"] {
     display: none;
   }
 
-  header#hero .grid a.btn {
+  header#hero .text-grid a.btn {
     position: absolute;
     bottom: 2rem;
 
@@ -761,19 +789,19 @@ a.btn[title="scroll down"]:hover {
   }
 
   /* carp page styling */
-  .showcase > div {
+  .timeline > div {
     flex-direction: column;
   }
 
-  .showcase div:nth-child(even) picture {
+  .timeline div:nth-child(even) picture {
     order: initial;
   }
 
-  .showcase picture {
+  .timeline picture {
     width: 100%;
   }
 
-  .showcase div .data {
+  .timeline div .data {
     padding: 0;
 
     width: 100%;
