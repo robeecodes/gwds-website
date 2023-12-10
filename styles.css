@@ -31,8 +31,6 @@ body {
 
   /* prevent overflow from the mouse trailer */
   overflow-x: hidden !important;
-  width: 100vw !important;
-  max-width: 100%;
 }
 
 body#carp,
@@ -402,8 +400,8 @@ header#hero picture img {
 a.btn[title="scroll down"] {
   position: absolute;
 
-  bottom: 0;
-  right: 0;
+  bottom: .2rem;
+  right: .2rem;
 
   width: 7rem;
   height: 7rem;
@@ -421,8 +419,6 @@ a.btn[title="scroll down"] {
 a.btn[title="scroll down"]:hover {
   background-color: var(--accent);
   color: var(--base);
-
-  transform: scale(1.5);
 }
 
 /* projects section styling */
