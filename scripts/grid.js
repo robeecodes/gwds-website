@@ -28,7 +28,7 @@ function gridAnimation() {
             gsap.to(pic, {
                 scrollTrigger: {
                     trigger: pic,
-                    start: "top 80%",
+                    start: "top 100%",
                     end: "top 50%",
                     scrub: i % gridColumnCount
                 },
@@ -47,7 +47,7 @@ const resizeEvent = () => {
 // min-width is slightly above 64em to prevent overlap when changing screen size
 mm.add("(min-width: calc(64em + .1px))", () => {
     ScrollTrigger.refresh();
-    
+
     gridAnimation();
 
     window.addEventListener("resize", resizeEvent);

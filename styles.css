@@ -375,6 +375,8 @@ header#hero
 
 /* position the hero image */
 header#hero picture {
+  aspect-ratio: 1 / 1;
+
   display: block;
 
   position: absolute;
@@ -382,13 +384,16 @@ header#hero picture {
   z-index: -1;
 
   width: 40%;
-  max-width: 35rem;
+  max-width: 25rem;
 }
 
 header#hero picture img {
   border-radius: 2rem;
 
-  filter: brightness(25%);
+  height: 100%;
+  object-position: center center;
+
+  filter: brightness(15%);
 }
 
 /* scroll down button */
@@ -695,6 +700,7 @@ a.btn[title="scroll down"]:hover {
 
   footer p {
     margin: 0;
+    text-align: center;
   }
 
   /* homepage styling */
