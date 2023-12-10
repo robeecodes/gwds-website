@@ -31,7 +31,8 @@ body {
 
   /* prevent overflow from the mouse trailer */
   overflow-x: hidden !important;
-  max-width: 100vw;
+  width: 100vw !important;
+  max-width: 100%;
 }
 
 body#carp,
