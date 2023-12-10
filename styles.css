@@ -505,6 +505,10 @@ a.btn[title="scroll down"]:hover {
   margin-bottom: 3rem;
 }
 
+.timeline p {
+  margin-block: .5em;
+}
+
 .timeline div:nth-child(even) picture {
   order: 2;
 }
@@ -521,7 +525,7 @@ a.btn[title="scroll down"]:hover {
   width: 45%;
 }
 
-.timeline div .data:nth-child(odd) {
+.timeline div:nth-child(even) .data {
   padding-left: 0;
   padding-right: 3rem;
 }

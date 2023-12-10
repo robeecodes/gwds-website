@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic and Web Design Studio - Coding</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="scripts/nav.js"></script>
+    <script defer src="scripts/lightbox.js"></script>
+    <script defer src="scripts/mouseTrailer.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script defer src="scripts/timeline.js"></script>
+</head>
+
+<body id="coding">
+    <!-- this is the lightbox which appears when an image is clicked -->
+    <dialog class="modal" open="false"></dialog>
+
+    <!-- this is the trailer which follows the mouse -->
+    <div id="trailer">view</div>
+
+    <!-- this draws the hamburger menu on mobile -->
+    <button class="burger" aria-label="open main menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="carp.html">carp</a></li>
+            <li><a href="typography.html">typo&shy;graphy</a></li>
+            <li><a href="#" aria-current="page">coding</a></li>
+            <li><a href="reflection.html">reflec&shy;tion</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h2>projects</h2>
+        <h1>coding</h1>
+        <p><em>Press the images to get a full view!</em></p>
+    </header>
+    <main>
+        <section class="timeline">
+            <div>
+                <picture role="button" tabindex="0" aria-label="first worksheet preview">
+                    <source srcset="assets/img/coding/first-sheet.webp">
+                    <img src="assets/img/coding/first-sheet.png" alt="first worksheet preview">
+                </picture>
+                <div class="data">
+                    <h2 class="accent">first worksheet</h2>
+                    <p>This was the very first worksheet I completed - a very brief introduction to HTML.</p>
+                    <p><a class="accent" href="https://github.com/robeecodes/GWDS-Weekly-Coding-Sheets/tree/main/week-1">View the Repository &rarr;</a></p>
+                    <p><a class="accent" href="https://robeecodes.github.io/GWDS-Weekly-Coding-Sheets/week-1/">View on Github Pages &rarr;</a></p>
+                </div>
+            </div>
+            <div>
+                <picture role="button" tabindex="0" aria-label="html and css preview">
+                    <source srcset="assets/img/coding/html-css-sheet.png">
+                    <img src="assets/img/coding/html-css-sheet.png" alt="html and css preview">
+                </picture>
+                <div class="data">
+                    <h2 class="accent">html and css</h2>
+                    <p>A series of worksheets going into further detail on <span class="accent">HTML</span> and <span class="accent">CSS</span>.</p>
+                    <p><a class="accent" href="https://github.com/robeecodes/HTML-CSS">View the Repository &rarr;</a></p>
+                    <p><a class="accent" href="https://robeecodes.github.io/HTML-CSS/">View on Github Pages &rarr;</a></p>
+                </div>
+            </div>
+            <div>
+                <picture role="button" tabindex="0" aria-label="flexbox rundown preview">
+                    <source srcset="assets/img/coding/flexbox-sheet.webp">
+                    <img src="assets/img/coding/flexbox-sheet.png" alt="flexbox rundown preview">
+                </picture>
+                <div class="data">
+                    <h2 class="accent">flexbox rundown</h2>
+                    <p>A series of worksheets explaining <span class="accent">CSS flexbox</span>.</p>
+                    <p><a class="accent" href="https://github.com/robeecodes/flexbox-rundown">View the Repository &rarr;</a></p>
+                    <p><a class="accent" href="https://robeecodes.github.io/flexbox-rundown/">View on Github Pages &rarr;</a></p>
+                </div>
+            </div>
+            <div>
+                <picture role="button" tabindex="0" aria-label="website moodboard">
+                    <source srcset="assets/img/coding/moodboard.webp">
+                    <img src="assets/img/coding/moodboard.png" alt="website moodboard">
+                </picture>
+                <div class="data">
+                    <h2 class="accent">about this website</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Graphic and Web Design Studio</p>
+        <p>&copy; Robin King</p>
+    </footer>
+</body>
+
+</html>
