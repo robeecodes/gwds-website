@@ -538,11 +538,11 @@ a.btn[title="scroll down"]:hover {
   margin-block: .5em;
 }
 
-.timeline article:nth-of-type(even) picture {
+.timeline article:nth-of-type(even) .tl-image {
   order: 2;
 }
 
-.timeline picture {
+.timeline .tl-image {
   width: 55%;
 }
 
@@ -851,7 +851,7 @@ a.btn[title="scroll down"]:hover {
     flex-direction: column;
   }
 
-  .timeline article:nth-of-type(even) picture {
+  .timeline article:nth-of-type(even) .tl-image {
     order: initial;
   }
 
@@ -859,7 +859,7 @@ a.btn[title="scroll down"]:hover {
     margin-top: 2rem;
   }
 
-  .timeline picture {
+  .timeline .tl-image {
     margin-inline: auto;
 
     width: 90%;

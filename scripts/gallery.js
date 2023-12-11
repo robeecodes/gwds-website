@@ -1,4 +1,5 @@
-// https://www.youtube.com/watch?v=CQHvWqYXI5s
+// References
+// snorkITV (2023). GSAP ScrollTrigger Responsive Split Screen Pinning. <i>YouTube</i> [video]. May 31. Available from: https://www.youtube.com/watch?v=CQHvWqYXI5s [Accessed 11 December 2023].
 
 const photos = gsap.utils.toArray(".gallery-pictures img.scrub");
 
