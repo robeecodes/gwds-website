@@ -9,7 +9,7 @@ function computeGridCols() {
     return gridComputedStyle.getPropertyValue("grid-template-columns").split(" ").length;
 }
 
-let mm = gsap.matchMedia();
+let mmGrid = gsap.matchMedia();
 
 
 // Move animation into function to trigger on resize
@@ -45,7 +45,7 @@ const resizeEvent = () => {
 };
 
 // min-width is slightly above 64em to prevent overlap when changing screen size
-mm.add("(min-width: calc(64em + .1px))", () => {
+mmGrid.add("(min-width: calc(64em + .1px))", () => {
     ScrollTrigger.refresh();
 
     gridAnimation();
