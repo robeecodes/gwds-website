@@ -72,8 +72,25 @@ h2 {
   font-weight: 300;
 }
 
+h3 {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 p {
   font-size: 1.5rem;
+}
+
+/* Formatting for references */
+
+.references {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.references * {
+  margin: 0;
 }
 
 img {
@@ -502,17 +519,28 @@ a.btn[title="scroll down"]:hover {
 }
 
 /* carp page styling */
-.timeline > div {
+.timeline > article {
   display: flex;
+  flex-direction: column;
 
   margin-bottom: 3rem;
+}
+
+.timeline > article .tl-wrapper {
+  display: flex;
+}
+
+.timeline h2 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  line-height: 50%;
 }
 
 .timeline p {
   margin-block: .5em;
 }
 
-.timeline div:nth-child(even) picture {
+.timeline article:nth-of-type(even) picture {
   order: 2;
 }
 
@@ -520,7 +548,7 @@ a.btn[title="scroll down"]:hover {
   width: 55%;
 }
 
-.timeline div .data {
+.timeline article .data {
   flex-direction: column;
 
   padding-left: 3rem;
@@ -528,7 +556,7 @@ a.btn[title="scroll down"]:hover {
   width: 45%;
 }
 
-.timeline div:nth-child(even) .data {
+.timeline article:nth-of-type(even) .data {
   padding-left: 0;
   padding-right: 3rem;
 }
@@ -816,12 +844,20 @@ a.btn[title="scroll down"]:hover {
   }
 
   /* carp page styling */
-  .timeline > div {
+  .timeline > article {
     flex-direction: column;
   }
 
-  .timeline div:nth-child(even) picture {
+  .timeline > article .tl-wrapper {
+    flex-direction: column;
+  }
+
+  .timeline article:nth-of-type(even) picture {
     order: initial;
+  }
+
+  .timeline h2 {
+    margin-top: 1rem;
   }
 
   .timeline picture {
@@ -830,7 +866,7 @@ a.btn[title="scroll down"]:hover {
     width: 90%;
   }
 
-  .timeline div .data {
+  .timeline article .data {
     padding: 0;
 
     width: 100%;

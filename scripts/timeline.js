@@ -1,4 +1,4 @@
-const timelinePics = Array.from(document.querySelectorAll(".timeline > div > picture"));
+const timelinePics = Array.from(document.querySelectorAll(".timeline > article picture"));
 
 let mm = gsap.matchMedia();
 
