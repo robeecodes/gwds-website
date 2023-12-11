@@ -84,7 +84,7 @@ p, li {
 
 /* Formatting for references */
 
-.references li, .references h4 {
+.references ul, .references li, .references h4 {
   margin: 0;
 
   font-size: 1rem;
@@ -408,7 +408,7 @@ header#hero picture img {
   height: 100%;
   object-position: center center;
 
-  filter: brightness(15%);
+  filter: brightness(25%);
 }
 
 /* scroll down button */

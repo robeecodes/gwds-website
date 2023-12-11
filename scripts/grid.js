@@ -1,3 +1,6 @@
+// References
+// Robbendebiene (2019) A way to count columns in a responsive grid Available from: https://stackoverflow.com/questions/55204205/a-way-to-count-columns-in-a-responsive-grid [Accessed 11 December 2023]
+
 const gridPics = document.querySelectorAll('.grid > div picture');
 
 // Store triggers so they can be killed on resize
