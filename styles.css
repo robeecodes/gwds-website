@@ -1,3 +1,5 @@
+/* Fluid fonts calculated using the Fluid-responsive font-size calculator (Web Semantics UK, 2023) */
+
 /* Darker Grotesque font import */
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;600;900&display=swap");
 
@@ -876,3 +878,8 @@ a.btn[title="scroll down"]:hover {
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   }
 }
+
+
+/* References
+  Web Semantics UK (2023) Fluid-responsive font-size calculator. Available from: https://websemantics.uk/tools/responsive-font-calculator/ [Accessed 12 December 2023].
+*/
