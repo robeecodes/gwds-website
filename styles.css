@@ -54,6 +54,8 @@ body#coding,
   color: var(--accent);
 }
 
+/* General styling */
+
 h1 {
   margin-block: 0;
 
@@ -84,15 +86,6 @@ p, li {
   font-size: 1.5rem;
 }
 
-/* Formatting for references */
-
-.references ul, .references li, .references h4 {
-  margin: 0;
-
-  font-size: 1rem;
-  font-weight: 300;
-}
-
 img {
   border-radius: 2rem;
 
@@ -104,8 +97,22 @@ img {
   object-position: 0 0;
 }
 
-.thumbnail {
-  position: relative;
+a {
+  color: var(--text);
+  transition: all 0.5s;
+}
+
+a:hover {
+  filter: drop-shadow(0 0 0.5rem var(--accent));
+}
+
+/* Formatting for references */
+
+.references ul, .references li, .references h4 {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 /* style the mouse trailer */
@@ -151,15 +158,6 @@ body:hover #trailer {
   font-size: 1.25rem;
 
   border-radius: 2.5rem;
-}
-
-a {
-  color: var(--text);
-  transition: all 0.5s;
-}
-
-a:hover {
-  filter: drop-shadow(0 0 0.5rem var(--accent));
 }
 
 /* pad common areas of website */
@@ -518,7 +516,7 @@ a.btn[title="scroll down"]:hover {
   height: 100%;
 }
 
-/* carp page styling */
+/* carp and coding page styling */
 .timeline > article {
   display: flex;
   flex-direction: column;
@@ -688,17 +686,22 @@ a.btn[title="scroll down"]:hover {
     margin: 0;
     padding: 0;
 
+    width: 100%;
+
     list-style-type: none;
   }
 
   nav li {
+    padding-block: .5em;
     margin-left: 0;
+
+    border-bottom: .1rem var(--base) solid;
   }
 
   nav li a {
     color: var(--base);
     font-weight: 900;
-    font-size: 6rem;
+    font-size: clamp(5rem, calc(5rem + ((1vw - 0.225rem) * 1.4815)), 6rem);
 
     line-height: 80%;
 
@@ -844,7 +847,7 @@ a.btn[title="scroll down"]:hover {
     height: auto;
   }
 
-  /* carp page styling */
+  /* carp and coding page styling */
   .timeline > article {
     flex-direction: column;
   }

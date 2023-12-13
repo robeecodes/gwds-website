@@ -1,6 +1,8 @@
 const burger = document.querySelector(".burger");
 const nav = document.querySelector("nav");
 
+
+// Reset navbar styles if screen is resized
 window.addEventListener("resize", () => {
     burger.setAttribute("aria-expanded", "false");
     burger.classList.remove("open");
@@ -8,6 +10,7 @@ window.addEventListener("resize", () => {
     document.body.removeAttribute("style");
 });
 
+// Create burger menu for mobile
 burger.addEventListener("click", () => {
     nav.classList.toggle("open");
 
