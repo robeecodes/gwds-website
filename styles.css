@@ -107,12 +107,24 @@ a:hover {
 }
 
 /* Formatting for references */
+.references {
+  margin-bottom: 1.25rem;
+}
+
+.references h3 {
+  margin-top: .5rem;
+}
 
 .references ul, .references li, .references h4 {
   margin: 0;
 
   font-size: 1rem;
   font-weight: 300;
+}
+
+.references a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* style the mouse trailer */
@@ -870,7 +882,7 @@ a.btn[title="scroll down"]:hover {
     width: 90%;
   }
 
-  .timeline article .data {
+  .timeline article .data, .timeline article:nth-of-type(even) .data {
     padding: 0;
 
     width: 100%;
