@@ -233,8 +233,8 @@ a.btn:hover {
 
   background-color: rgba(0, 0, 0, 0.75);
 
-  backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.5rem);
 }
 
 .modal[open="true"] {
